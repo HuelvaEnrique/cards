@@ -1,78 +1,70 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  border-style: solid;
-  border-width: 1px;
   height: 90vh;
   width: 100%;
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   grid-template-rows: repeat(4, 1fr);
   grid-template-areas:
-    "card1 card2 card3 card4 card5 card6 ."
-    ". . . . . . ."
-    ". . . . . . ."
-    "card7 card8 card9 card10 card11 card12 .";
-  grid-gap: 5%;
-  padding-left: 5%;
+    "card1 card2 card3 card4 card5 card6 pun"
+    ". jugar pedir fin menu . pun"
+    ". . . . . . yo"
+    "card7 card8 card9 card10 card11 card12 yo";
   padding-top: 2%;
-  padding-bottom: 2%;
+  align-items: center;
+  justify-items: center;
 `;
 
 export const DivCards = styled.div`
   grid-area: ${(props) => props.area};
 
-  width: 100%;
+  width: 90%;
   height: 100%;
-`;
-
-export const ImgCardShow = styled.img`
-  width: 100%;
-  height: 100%;
-`;
-export const Header = styled.header`
-  background: blue;
-  color: #fff;
-  grid-area: header; //área
-
-  & > h1 {
-    margin-left: 2%;
-  }
-`;
-
-export const Main = styled.main`
-  padding-left: 2%;
-  grid-area: contenido; //área
-`;
-
-export const Sidebar = styled.aside`
-  background: orange;
-  min-height: 100px;
-  grid-area: sidebar; //área
-
-  /*flexbox para acomodar elementos*/
-
-  display: flex;
-  align-items: center;
-  justify-content: center; //área
-`;
-
-export const Widget = styled.div`
-  background: orchid;
-  height: 100px;
-  grid-area: ${(props) =>
-    props.className === "widget-1" ? "widget-1" : "widget-2"}; //área
-
-  /*flexbox para acomodar elementos*/
-
   display: flex;
   align-items: center;
   justify-content: center;
 `;
 
-export const Footer = styled.footer`
-  padding: 20px;
-  background: maroon;
-  color: #fff;
-  grid-area: footer; //área
+export const ImgCardShow = styled.img`
+  width: 90%;
+  height: 100%;
+  object-fit: cover;
+`;
+
+export const Button = styled.button`
+  grid-area: ${(props) => props.area};
+  border-style: solid;
+  border-width: 1px;
+  height: 2rem;
+  border-radius: 20px;
+  cursor: pointer;
+  width: 80%;
+`;
+
+export const Puntaje = styled.div`
+  grid-area: ${(props) => props.area};
+  border-style: solid;
+  border-width: 1px;
+  width: 80%;
+  height: 98%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 20px;
+`;
+
+export const Pjugador = styled.p`
+  width: 80%;
+  text-align: center;
+`;
+
+export const DivPuntuacion = styled.div`
+  background: grey;
+  width: 80%;
+  color: yellow;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
